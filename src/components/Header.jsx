@@ -13,7 +13,7 @@ export default function Header(props) {
         <img alt="metabnb logo" src={logo} className="w-32 inline" />
         <button className='ml-auto' onClick={() => setMenuIsOpen(!menuIsOpen)}>{menuIsOpen ? <Cross className="w-5 h-5" /> : <Hamburger className="w-5 h-5" />}</button>
       </div>
-      <div ref={menuRef} className={`space-y-2 overflow-hidden transition-[height] ${!menuIsOpen ? 'h-0' : ` mt-5 h-[${menuRef.current.scrollHeight}px]`}`}>
+      <div ref={menuRef} className='space-y-2 overflow-hidden transition-[height] mt-5' style={{ height: `${!menuIsOpen ? '0' : menuRef.current.scrollHeight + 'px'}` }}>
         <ul className='flex flex-col gap-1'>
           <li><a href="#">Home</a></li>
           <li><a href="#">Place to stay</a></li>

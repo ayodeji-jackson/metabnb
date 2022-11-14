@@ -10,6 +10,9 @@
 @tailwind utilities;
 
 @layer utilities {
+  img {
+    @apply max-w-full;
+  }
   .emph {
     @apply font-bold text-primary;
   }
