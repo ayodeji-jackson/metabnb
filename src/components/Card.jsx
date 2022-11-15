@@ -1,9 +1,9 @@
-import { Star, Heart } from '../assets/icons';
+import { Star, Heart } from "../assets/icons";
 
 export default function Card({ imgSrc, name, price, distance, availability }) {
   return (
     <div className="border border-gray-300 rounded-xl p-4">
-      <div className='mb-4 relative rounded-[inherit] border-[inherit]'>
+      <div className="mb-4 relative rounded-[inherit] border-[inherit]">
         <img src={imgSrc} className="rounded-[inherit] border-[inherit]" />
         <Heart className="absolute top-3 right-3" />
       </div>
@@ -11,9 +11,7 @@ export default function Card({ imgSrc, name, price, distance, availability }) {
         <p>{name}</p>
         <p className="justify-self-end font-bold">{price}</p>
         <p>{distance}</p>
-        <p className="justify-self-end">
-          {availability}
-        </p>
+        <p className="justify-self-end">{availability}</p>
       </div>
       <div className="space-x-2">
         {Array(5)
