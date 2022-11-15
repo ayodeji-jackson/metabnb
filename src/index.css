@@ -9,6 +9,9 @@
 @tailwind utilities;
 
 @layer utilities {
+  ul {
+    @apply h-full;
+  }
   img {
     @apply max-w-full;
   }
@@ -23,5 +26,8 @@
   }
   .dialog-button img {
     @apply inline mr-5;
+  }
+  .places-container {
+    @apply py-5 grid gap-3 [grid-template-columns:repeat(auto-fit,minmax(15rem,1fr))] lg:grid-cols-4;
   }
 }

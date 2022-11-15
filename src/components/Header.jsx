@@ -6,19 +6,27 @@ import * as Dialog from '@radix-ui/react-dialog';
 import metamask from '../assets/metamask.png';
 import walletconnect from '../assets/walletconnect.png';
 import { Link } from 'react-router-dom';
+import { useEffect } from 'react';
 
-export default function Header(props) {
+export default function Header() {
   const [ menuIsOpen, setMenuIsOpen ] = useState(false);
   const menuRef = useRef(null);
 
+  useEffect(() => {
+    if (innerWidth >= 768) {
+      setMenuIsOpen(true);
+      menuRef.current.style.height = "100%";
+    }
+  }, []);
+
   return (
-    <header {...props}>
-      <div className='flex items-center'>
-        <h1><Link to="/"><img alt="metabnb logo" src={logo} className="w-32 inline" /></Link></h1>
-        <button className='ml-auto' onClick={() => setMenuIsOpen(!menuIsOpen)}>{menuIsOpen ? <Cross className="w-5 h-5" /> : <Hamburger className="w-5 h-5" />}</button>
+    <header className="text-[#434343] px-5 sm:px-16 lg:px-24 flex flex-col md:flex-row md:items-center md:gap-12">
+      <div className='flex mb-5 md:mb-0'>
+        <h1 className='my-auto'><Link to="/"><img alt="metabnb logo" src={logo} className="w-32 inline" /></Link></h1>
+        <button className='ml-auto md:hidden' onClick={() => setMenuIsOpen(!menuIsOpen)}>{menuIsOpen ? <Cross className="w-5 h-5" /> : <Hamburger className="w-5 h-5" />}</button>
       </div>
-      <div ref={menuRef} className='space-y-2 overflow-hidden transition-[height] mt-5' style={{ height: `${!menuIsOpen ? '0' : menuRef.current.scrollHeight + 'px'}` }}>
-        <ul className='flex flex-col gap-1'>
+      <div ref={menuRef} className='flex flex-col md:w-full w-fit overflow-hidden transition-[height] md:flex-row md:items-center md:gap-7  whitespace-nowrap' style={{ height: `${!menuIsOpen ? '0' : menuRef.current.scrollHeight + 'px'}` }}>
+        <ul className='flex flex-col gap-1 md:items-center md:flex-row md:gap-7 text-sm'>
           <li><Link to="/">Home</Link></li>
           <li><Link to="/place-to-stay">Place to stay</Link></li>
           <li><Link to="#">NFTs</Link></li>
@@ -26,7 +34,7 @@ export default function Header(props) {
         </ul>
         <Dialog.Root>
           <Dialog.Trigger asChild>
-            <button className="bg-primary text-white py-2 px-5 rounded-lg">Connect Wallet</button>
+            <button className="bg-primary text-white py-2 px-5 rounded-lg text-sm md:ml-auto">Connect Wallet</button>
           </Dialog.Trigger>
           <Dialog.Portal>
             <Dialog.Overlay className='fixed bg-[rgba(64,64,64,0.3)] inset-0' />

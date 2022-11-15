@@ -20,8 +20,8 @@ import Card from './Card';
 
 export default function Places() {
   return (
-    <section className='px-5 my-6'>
-      <div className='flex gap-3 items-center'>
+    <section className='px-5 my-6 sm:px-16 lg:px-20'>
+      <div className='flex gap-3 items-center text-sm'>
         <ul className='list-none flex gap-5 overflow-x-auto whitespace-nowrap select-none'>
           <li>Restaurant</li>
           <li>Cottage</li>
@@ -32,9 +32,9 @@ export default function Places() {
           <li>Off-grid</li>
           <li>Farm</li>
         </ul>
-        <button className='flex gap-5 border border-[#B4B4B4] py-2 px-3 rounded-lg hover:bg-[#F8F9FA] transition-colors'>Location<Settings /></button>
+        <button className='flex ml-auto gap-5 border border-[#B4B4B4] py-2 px-3 rounded-lg hover:bg-[#F8F9FA] transition-colors'>Location<Settings className="w-5 h-5" /></button>
       </div>
-      <div className='py-5 grid gap-3'>
+      <div className='places-container'>
         { [img1, img2, img3, img4, img5, img6, img7, img8, img9, img10, img11, img12, img13, img14, img15, img16].map((img) => <Card key={img} imgSrc={img} name="Desert king" price="1MBT per night" distance="2345km away" availability="available for 2weeks stay" />)}
       </div>
     </section>
