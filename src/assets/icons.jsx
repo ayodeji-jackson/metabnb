@@ -29,8 +29,8 @@ export const Star = (props) =>
     </defs>
   </svg>
 
-export const Angle = () => 
-  <svg width="10" height="16" viewBox="0 0 10 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+export const Angle = (props) => 
+  <svg width="10" height="16" viewBox="0 0 10 16" fill="none" xmlns="http://www.w3.org/2000/svg" {...props}>
     <path d="M9.38381 8.00009C9.38381 8.26892 9.28117 8.53771 9.07631 8.74267L2.62657 15.1923C2.21628 15.6026 1.55108 15.6026 1.14096 15.1923C0.730845 14.7822 0.730845 14.1172 1.14096 13.7068L6.84805 8.00009L1.14116 2.2933C0.731043 1.88301 0.731043 1.21801 1.14116 0.807924C1.55128 0.397442 2.21648 0.397442 2.62677 0.807924L9.07651 7.2575C9.2814 7.46256 9.38381 7.73135 9.38381 8.00009Z" fill="#959DA6"/>
   </svg>
 
@@ -59,17 +59,17 @@ export const Twitter = () =>
     <path d="M18 3.98135C17.3229 4.27666 16.6068 4.47293 15.8737 4.5641C16.6463 4.1058 17.2238 3.38011 17.4971 2.52447C16.7738 2.95348 15.9824 3.25558 15.1571 3.41772C14.6511 2.87747 13.9944 2.50188 13.2722 2.33974C12.55 2.1776 11.7957 2.23641 11.1073 2.50852C10.419 2.78064 9.82836 3.25348 9.41223 3.86563C8.9961 4.47777 8.77368 5.20091 8.77387 5.9411C8.77387 6.2336 8.79862 6.51485 8.85938 6.7826C7.39134 6.71062 5.95503 6.32961 4.64434 5.66448C3.33365 4.99935 2.17811 4.06507 1.25325 2.92272C0.779422 3.73481 0.632935 4.69697 0.843619 5.61328C1.0543 6.52958 1.60631 7.33114 2.38725 7.85472C1.8031 7.83906 1.23128 7.68318 0.72 7.40022V7.44072C0.720979 8.29283 1.0155 9.11859 1.55398 9.77899C2.09247 10.4394 2.84203 10.8941 3.6765 11.0666C3.36081 11.1498 3.03546 11.1907 2.709 11.1881C2.47454 11.1923 2.24031 11.1711 2.01038 11.1251C2.24881 11.8575 2.70843 12.498 3.32594 12.9583C3.94346 13.4187 4.68851 13.6763 5.4585 13.6957C4.15231 14.7173 2.54135 15.2714 0.883125 15.2696C0.5805 15.2696 0.29025 15.2561 0 15.219C1.68737 16.3063 3.65364 16.8815 5.661 16.875C12.4515 16.875 16.164 11.25 16.164 6.37422C16.164 6.2111 16.1584 6.0536 16.1505 5.89722C16.8783 5.37633 17.5051 4.72709 18 3.98135Z" fill="#F7F7F7"/>
   </svg>
 
-export const Settings = () => 
-  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-    <path d="M21.9999 5L10.9999 5" stroke="#333333" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
-    <path d="M6.99985 5H1.99985" stroke="#333333" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
-    <path d="M21.9999 12H16.9999" stroke="#333333" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
-    <path d="M12.9999 12H1.99985" stroke="#333333" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
-    <path d="M21.9999 19H10.9999" stroke="#333333" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
-    <path d="M6.99985 19H1.99985" stroke="#333333" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
-    <path d="M10.9999 21V17" stroke="#333333" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
-    <path d="M10.9999 7V3" stroke="#333333" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
-    <path d="M13.0001 14V10" stroke="#333333" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+export const Settings = (props) => 
+  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" {...props}>
+    <path d="M21.9999 5L10.9999 5" stroke="#333333" strokeWidth="1.5" strokeMiterlimit="10" strokeLinecap="round" strokeLinejoin="round"/>
+    <path d="M6.99985 5H1.99985" stroke="#333333" strokeWidth="1.5" strokeMiterlimit="10" strokeLinecap="round" strokeLinejoin="round"/>
+    <path d="M21.9999 12H16.9999" stroke="#333333" strokeWidth="1.5" strokeMiterlimit="10" strokeLinecap="round" strokeLinejoin="round"/>
+    <path d="M12.9999 12H1.99985" stroke="#333333" strokeWidth="1.5" strokeMiterlimit="10" strokeLinecap="round" strokeLinejoin="round"/>
+    <path d="M21.9999 19H10.9999" stroke="#333333" strokeWidth="1.5" strokeMiterlimit="10" strokeLinecap="round" strokeLinejoin="round"/>
+    <path d="M6.99985 19H1.99985" stroke="#333333" strokeWidth="1.5" strokeMiterlimit="10" strokeLinecap="round" strokeLinejoin="round"/>
+    <path d="M10.9999 21V17" stroke="#333333" strokeWidth="1.5" strokeMiterlimit="10" strokeLinecap="round" strokeLinejoin="round"/>
+    <path d="M10.9999 7V3" stroke="#333333" strokeWidth="1.5" strokeMiterlimit="10" strokeLinecap="round" strokeLinejoin="round"/>
+    <path d="M13.0001 14V10" stroke="#333333" strokeWidth="1.5" strokeMiterlimit="10" strokeLinecap="round" strokeLinejoin="round"/>
   </svg>
 
 export const Hamburger = (props) => 

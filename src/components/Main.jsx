@@ -18,7 +18,6 @@ import learnMore2 from '../assets/learn-more-2.png';
 import learnMore3 from '../assets/learn-more-3.png';
 
 import Card from './Card';
-import Footer from './Footer';
 
 export default function Main(props) {
   return (
@@ -62,7 +61,6 @@ export default function Main(props) {
           <img src={learnMore3} className="rounded-lg translate-y-3/4 rotate-[-8.76deg] absolute" />
         </div>
       </section>
-      <Footer />
     </main>
   )
 }
