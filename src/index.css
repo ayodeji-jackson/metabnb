@@ -1,8 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Red+Rose:wght@400;700&display=swap');
 
 * {
-  font-family: 'Red Rose', cursive; 
-  color: #434343;
+  font-family: 'Red Rose', cursive;
 }
 
 @tailwind base;
@@ -15,5 +14,8 @@
   }
   .emph {
     @apply font-bold text-primary;
+  }
+  footer h2 {
+    @apply text-xl font-bold text-white;
   }
 }
