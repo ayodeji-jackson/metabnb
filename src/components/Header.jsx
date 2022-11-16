@@ -20,7 +20,7 @@ export default function Header() {
   }, []);
 
   return (
-    <header className="text-[#434343] px-5 sm:px-16 lg:px-24 flex flex-col md:flex-row md:items-center md:gap-8 lg:gap-32">
+    <header className="text-[#434343] p-5 sm:px-16 lg:px-24 flex flex-col md:flex-row md:items-center md:gap-8 lg:gap-32">
       <div className="flex mb-5 md:mb-0">
         <h1 className="my-auto">
           <Link to="/">

@@ -7,13 +7,13 @@ import Places from "./components/Places";
 
 export default function App() {
   return (
-    <div className="my-5">
+    <>
       <Header />
       <Routes>
         <Route path="/" element={<Main className="mt-5 text-[#434343]" />} />
         <Route path="/place-to-stay" element={<Places />} />
       </Routes>
       <Footer />
-    </div>
+    </>
   );
 }
